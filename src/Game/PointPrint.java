@@ -1,3 +1,5 @@
+package Game;
+
 public class PointPrint implements Print{
     private Point point;
 

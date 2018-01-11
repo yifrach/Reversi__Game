@@ -1,3 +1,5 @@
+package Game;
+
 public class CellPrint implements Print{
     private int color;
     public CellPrint(int color) {

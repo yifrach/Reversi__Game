@@ -1,3 +1,5 @@
+package Game;
+
 public class Board {
     private int size;
     public Cell[][] cellMatrix;

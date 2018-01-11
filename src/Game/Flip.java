@@ -1,3 +1,5 @@
+package Game;
+
 public class Flip {
     private Board board;
     private int wall;

@@ -1,3 +1,5 @@
+package Game;
+
 public class StringPrint implements Print{
     private String str;
 

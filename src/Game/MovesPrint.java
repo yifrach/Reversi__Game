@@ -1,3 +1,5 @@
+package Game;
+
 public class MovesPrint implements Print{
 
     private BoardScanner scanner;

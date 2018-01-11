@@ -1,3 +1,5 @@
+package Game;
+
 import java.util.Scanner;
 
 public class Game {
@@ -27,7 +29,7 @@ public class Game {
         this.board = new Board(size.nextInt());
         this.scanner = new BoardScanner(board);
         this.manager = new GameManager(scanner, board);
-        this.boardPrint=new BoardPrint(board);
+        this.boardPrint=new Game.BoardController(board);
     }
 
     /**

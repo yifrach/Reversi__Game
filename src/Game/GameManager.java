@@ -1,3 +1,5 @@
+package Game;
+
 public class GameManager {
     private int wall;
     private Board board;
