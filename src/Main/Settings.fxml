@@ -23,7 +23,7 @@
             <Insets />
          </VBox.margin>
       </Slider>
-      <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="450.0" spacing="45.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="450.0" spacing="46.0">
          <children>
             <Label text="Color of first player">
                <font>

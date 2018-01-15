@@ -16,7 +16,7 @@ public class MainMenuController {
     @FXML
     public void startGame(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Reversi.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ReversiGame.fxml"));
             Parent reversiGame = fxmlLoader.load();
             Scene scene = new Scene(reversiGame);
             Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -33,7 +33,7 @@ public class MainMenuController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Settings.fxml"));
             Parent settingsRoot = fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setTitle("Reversi Game Settings");
+            stage.setTitle("Reversi Main.Game Settings");
             stage.setScene(new Scene(settingsRoot));
             stage.show();
         } catch (Exception e) {
