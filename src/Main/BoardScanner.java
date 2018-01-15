@@ -9,10 +9,15 @@ public class BoardScanner {
     private int firstPlayerScore;
     private int secondPlayerScore;
 
+    /**
+     * Constructor for our board scanner.
+     *
+     * @param board - the board to scan.
+     */
     public BoardScanner(Board board) {
         this.board = board;
         this.wall = this.board.getSize();
-        this.pointsVector = new ArrayList<Point>();
+        this.pointsVector = new ArrayList<>();
         this.firstPlayerScore = 2;
         this.secondPlayerScore = 2;
     }
@@ -20,7 +25,7 @@ public class BoardScanner {
     /**
      * Scanning our board cell by cell using 8 sub functions and by the color it gets
      *
-     * @param color - an Integer that represent the color
+     * @param color - an Integer that represent the color and thus the players number
      */
     public void scanBoard(int color) {
         // Going over each cell in the board
@@ -60,7 +65,7 @@ public class BoardScanner {
     /**
      * Get the amount of disks on the board based on the color
      *
-     * @param color -an Integer that represent the color
+     * @param color -an Integer that represent the players number
      * @return -an Integer that disks score on the board
      */
     public int getDisksScore(int color) {
@@ -79,7 +84,7 @@ public class BoardScanner {
     /**
      * Return whether or not a player has any moves to play
      *
-     * @param color --an Integer that represent the color
+     * @param color - an Integer that represent the players number
      * @return - a bool- true if it has moves, false if not
      */
     public boolean hasMoves(int color) {

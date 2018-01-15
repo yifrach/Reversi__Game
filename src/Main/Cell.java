@@ -1,14 +1,12 @@
 package Main;
 
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 
 public class Cell {
     private int playerNum;
-    private Color color;
 
     /**
-     * Initalzing it as an empty cell as default
+     * Our constructor initalzing it as an empty cell by default
      */
     public Cell() { this.playerNum = PlayerNumber.empty; }
 
@@ -30,16 +28,16 @@ public class Cell {
     }
 
     /**
-     * Change the cells color to color
+     * Change the cells color
      *
-     * @param playerNum - an Integer that represent the newColor
+     * @param playerNum - an Integer that represent the player number
      */
     public void changePlayerNum(int playerNum) {
         this.playerNum = playerNum;
     }
 
     /**
-     * Main.Flip the cell disk - changing its color
+     * Flip the cell disk - changing its color
      */
     public void flip() {
         if (this.playerNum == PlayerNumber.firstPlayer) {

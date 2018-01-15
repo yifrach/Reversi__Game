@@ -1,9 +1,14 @@
 package Main;
 
 public class Board {
-    private int size;
     public Cell[][] cellMatrix;
+    private int size;
 
+    /**
+     * Constructor for our board.
+     *
+     * @param size - the boards size.
+     */
     public Board(int size) {
         this.size = size;
         // Initialize our cellMatrix
@@ -22,20 +27,20 @@ public class Board {
     }
 
     /**
-     * Getter for our boards size
+     * Getter for our boards size.
      *
-     * @return - an Integer that represent the size of the board
+     * @return - an Integer that represent the size of the board.
      */
     public int getSize() {
         return this.size;
     }
 
     /**
-     * Add a single cell to the board
+     * Add a single cell to the board.
      *
-     * @param row   - an Integer that represent the row
-     * @param col   - an Integer that represent the col
-     * @param color - an Integer that represent the color
+     * @param row   - an Integer that represent the row.
+     * @param col   - an Integer that represent the col.
+     * @param color - an Integer that represent the color.
      */
     public void addCell(int row, int col, int color) {
         cellMatrix[row][col].changePlayerNum(color);

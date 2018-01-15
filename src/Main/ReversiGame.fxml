@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
 <HBox fx:id="root" prefHeight="500.0" prefWidth="600.0" spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.ReversiGameController">
    <children>
    <VBox alignment="TOP_CENTER" spacing="15.0">
       <children>
-          <Label fx:id="currentPlayer">Current Player:</Label>
-          <Label fx:id="p1Score">Player 1 score:</Label>
-          <Label fx:id="p2Score" text="Player 2 score:">Player 2 score: </Label>
+          <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0">
+              <children>
+                  <Label prefHeight="12.0" prefWidth="126.0" text="Current Player: ">
+                      <font>
+                          <Font name="System Bold" size="13.0" />
+                      </font>
+                  </Label>
+                  <Circle fx:id="currentPlayer" fill="DODGERBLUE" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+              </children>
+              <VBox.margin>
+                  <Insets />
+              </VBox.margin>
+          </HBox>
+          <Label fx:id="p1Score" text="Player 1 score: ">
+              <font>
+                  <Font name="System Bold" size="14.0" />
+              </font>
+              <VBox.margin>
+                  <Insets right="5.0" />
+              </VBox.margin>
+          </Label>
+          <Label fx:id="p2Score" text="Player 2 score:">
+              <font>
+                  <Font name="System Bold" size="14.0" />
+              </font>
+              <VBox.margin>
+                  <Insets right="5.0" />
+              </VBox.margin>
+          </Label>
+          <Pane prefHeight="1080.0" prefWidth="200.0" />
           <Button onAction="#settingsWindow">Game Settings</Button>
-          <Button onAction="#restartGame">Restart Game</Button>
+          <Button onAction="#startGame">Restart Game</Button>
           <Button onAction="#exitApp">Exit</Button>
       </children>
          <HBox.margin>
-            <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
+             <Insets bottom="30.0" left="5.0" right="10.0" top="20.0" />
          </HBox.margin>
    </VBox>
    </children>

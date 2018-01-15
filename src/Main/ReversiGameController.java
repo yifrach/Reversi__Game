@@ -1,59 +1,56 @@
 package Main;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+import javafx.scene.shape.Circle;
 
-import javax.xml.stream.Location;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class ReversiGameController implements Initializable, Notifier {
+public class ReversiGameController extends MainMenuController implements Initializable, Notifier {
     @FXML
     private HBox root;
     @FXML
-    private Label currentPlayer;
+    private Circle currentPlayer;
     @FXML
     private Label p1Score;
     @FXML
     private Label p2Score;
-    private ReversiBoardController reversiBoard;
-    private ArrayList<Listener> listeners = new ArrayList<>();
-    private Player p1;
-    private Player p2;
 
+    private ReversiBoardController reversiBoard;
+    private GameManager manager;
+    private ArrayList<Listener> listeners = new ArrayList<>();
 
     @Override
+    /**
+     * Initialzing our main GUI game
+     */
     public void initialize(URL location, ResourceBundle resources) {
+        // Setting up the game according to the users settings
         SettingsReader.readSettings("gameSettings.txt");
         Board board = new Board(SettingsReader.getBoardSize());
-        this.p1 = new Player(1, SettingsReader.getP1Color());
-        this.p2 = new Player(2, SettingsReader.getP2Color());
+        Player p1 = new Player(1, SettingsReader.getP1Color());
+        Player p2 = new Player(2, SettingsReader.getP2Color());
         BoardScanner scanner = new BoardScanner(board);
-        GameManager manager = new GameManager(scanner, board, this.p1, this.p2);
+        this.manager = new GameManager(scanner, board, p1, p2);
+        // Creating our GUI board within the game
         this.reversiBoard = new ReversiBoardController(scanner);
-        this.addListener(manager);
+        this.addListener(this.manager);
+        // Adding an event listener for each mouse click
         this.reversiBoard.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> {
+            // Converting it based on the click location
             Point point = converter(e.getX(), e.getY());
+            // Sending it to the game manager
             this.madeMove(point.getX(), point.getY());
         });
-
+        // Setting our GUI board to be dynamic
         root.getChildren().add(0, reversiBoard);
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
-            double boardNewWidth = newValue.doubleValue() - 160;
+            double boardNewWidth = newValue.doubleValue() - 200;
             reversiBoard.setPrefWidth(boardNewWidth);
             reversiBoard.draw();
         });
@@ -61,68 +58,56 @@ public class ReversiGameController implements Initializable, Notifier {
             reversiBoard.setPrefHeight(newValue.doubleValue());
             reversiBoard.draw();
         });
-        this.p1Score.setText("Player 1 Score: " + this.p1.getScore());
-        this.p2Score.setText("Player 2 Score: " + this.p2.getScore());
+        // Lastly displaying the players initial stats
+        this.currentPlayer.setFill(SettingsReader.getP1Color());
+        this.currentPlayer.setStrokeWidth(1);
+        this.p1Score.setText("Player 1 Score: " + p1.getScore());
+        this.p2Score.setText("Player 2 Score: " + p2.getScore());
     }
 
-
+    /**
+     * Converting our mouse click into a move.
+     *
+     * @param x - the clicks X position on screen.
+     * @param y - the clocks Y position on screen.
+     * @return - the corresponding Point on the board.
+     */
     private Point converter(double x, double y) {
         int col = (int) (x / (reversiBoard.getPrefWidth() / reversiBoard.getBoardSize()));
         int row = (int) (y / (reversiBoard.getPrefHeight() / reversiBoard.getBoardSize()));
         return new Point(row + 1, col + 1);
     }
 
-    @FXML
-    public void settingsWindow() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Settings.fxml"));
-            Parent settingsRoot = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Reversi Main.Game Settings");
-            stage.setScene(new Scene(settingsRoot));
-            stage.show();
-        } catch (Exception e) {
-            System.out.println("Cannot open file");
-        }
-    }
-
-    @FXML
-    public void restartGame(ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ReversiGame.fxml"));
-            Parent reversiGame = fxmlLoader.load();
-            Scene scene = new Scene(reversiGame);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @FXML
-    public void exitApp() {
-        Platform.exit();
-    }
-
     @Override
+    /**
+     * Adding a listener.
+     */
     public void addListener(Listener listen) {
         this.listeners.add(listen);
     }
 
     @Override
+    /**
+     * Removing a listener.
+     */
     public void removeListener(Listener listen) {
         this.listeners.remove(listen);
     }
 
     @Override
+    /**
+     * Notyfing a move has been made.
+     */
     public void madeMove(int row, int col) {
         for (Listener listener : this.listeners) {
             listener.clickMade(row, col);
         }
+        // Redrawing the board based on the move
         this.reversiBoard.draw();
-        this.currentPlayer.setText("Current player:");
-        this.p1Score.setText("Player 1 Score: " + this.p1.getScore());
-        this.p2Score.setText("Player 2 Score: " + this.p2.getScore());
+        // Displaying the game stats
+        //this.currentPlayer.setFill(this.reversiBoard.getCurrentPlayerColor());
+        //this.currentPlayer.setStrokeWidth(1);
+        this.p1Score.setText("Player 1 Score: " + this.manager.getP1Score());
+        this.p2Score.setText("Player 2 Score: " + this.manager.getP2Score());
     }
 }

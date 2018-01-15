@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.SettingsController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="482.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.SettingsController">
    <children>
       <Label text="Size of board">
          <VBox.margin>
@@ -18,7 +19,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Slider fx:id="sliderBoardSize" blockIncrement="2.0" majorTickUnit="2.0" max="20.0" min="4.0" minorTickCount="0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="318.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" VBox.vgrow="NEVER">
+      <Slider fx:id="sliderBoardSize" blockIncrement="2.0" majorTickUnit="2.0" max="20.0" maxWidth="440.0" min="4.0" minorTickCount="0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="318.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" VBox.vgrow="NEVER">
          <VBox.margin>
             <Insets />
          </VBox.margin>
@@ -54,11 +55,15 @@
             </ColorPicker>
          </children>
       </HBox>
-      <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveSettings" text="Save settings">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </Button>
+      <HBox prefHeight="41.0" prefWidth="460.0" spacing="20.0">
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveSettings" text="Save settings" />
+            <Label fx:id="warningLabel" prefHeight="40.0" prefWidth="316.0" textFill="#a11313">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </HBox>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

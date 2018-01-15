@@ -6,10 +6,10 @@ public class Point {
     private int grade;
 
     /**
-     * The constructor of the class
+     * Constructor for our point class.
      *
-     * @param x - an Integer that reopresent the X position
-     * @param y - an Integer that reopresent the Y position
+     * @param x - an Integer that represent the X position
+     * @param y - an Integer that represent the Y position
      */
     public Point(int x, int y) {
         this.x = x;

@@ -1,3 +1,3 @@
-BoardSize: 6.0
-P1Color: 0x000000ff
-P2Color: 0xff8080ff
+BoardSize: 4.0
+P1Color: 0xff9999ff
+P2Color: 0xffffffff

@@ -1,7 +1,5 @@
 package Main;
 
-import java.util.Scanner;
-
 public class GameManager implements Listener {
     private Board board;
     private BoardScanner scanner;
@@ -11,10 +9,12 @@ public class GameManager implements Listener {
     private Player player2;
 
     /**
-     * The constructor of the class
+     * Constructor for our game manager.
      *
-     * @param scanner - a Main.BoardScanner
-     * @param board   - a Main.Board
+     * @param scanner - the boards scanner.
+     * @param board - the game board.
+     * @param player1 - our first player.
+     * @param player2 - our second player.
      */
     public GameManager(BoardScanner scanner, Board board, Player player1, Player player2) {
         this.scanner = scanner;
@@ -26,9 +26,10 @@ public class GameManager implements Listener {
         this.scanner.scanBoard(this.player1.getPlayerNum());
     }
 
-
     /**
-     * Play a single turn of the game placing a single disk and flipping corresponding disks
+     * Play a single turn of the game placing a single validated disk
+     * on the board, flipping appropriate disks
+     *
      * @param row - the disks row
      * @param col - the disks column
      * @param playerNum - the players number
@@ -40,7 +41,12 @@ public class GameManager implements Listener {
         scanner.freeMovesList();
     }
 
-
+    /**
+     * Responding to a players turn in current cell.
+     *
+     * @param row - the cells row.
+     * @param col - the cells column.
+     */
     public void clickMade(int row, int col) {
         this.scanner.scanBoard(this.currentPlayer);
         // If the current player has a valid move
@@ -53,34 +59,36 @@ public class GameManager implements Listener {
                 this.currentPlayer = 3 - this.currentPlayer;
             }
         }
+        // Lastly updating both player scores
         this.player1.updateScore(scanner.getDisksScore(1));
         this.player2.updateScore(scanner.getDisksScore(2));
     }
 
-    //    public void clickMade(int row, int col) {
-//        if (this.firstPlayerTurn) {
-//            this.scanner.scanBoard(this.player1.getPlayerNum());
-//            if (this.playOneTurn(row, col, this.player1)) {
-//                if(this.scanner.hasMoves(this.player2.getPlayerNum())) {
-//                    this.firstPlayerTurn = false;
-//                } else {
-//                    scanner.freeMovesList();
-//                    this.scanner.scanBoard(this.player2.getPlayerNum());
-//                }
-//            }
-//        } else {
-//            this.scanner.scanBoard(this.player2.getPlayerNum());
-//            if (this.playOneTurn(row, col, this.player2)) {
-//                if(this.scanner.hasMoves(this.player1.getPlayerNum())) {
-//                    this.firstPlayerTurn = true;
-//                } else {
-//                    scanner.freeMovesList();
-//                    this.scanner.scanBoard(this.player2.getPlayerNum());
-//                }
-//            }
-//        }
-//        this.player1.updateScore(scanner.getDisksScore(1));
-//        this.player2.updateScore(scanner.getDisksScore(2));
-//    }
+    /**
+     * Getter for our current player.
+     *
+     * @return - the current players number.
+     */
+    public int getCurrentPlayer() {
+        return this.currentPlayer;
+    }
+
+    /**
+     * Getter for the first players score.
+     *
+     * @return - the first players score.
+     */
+    public int getP1Score() {
+        return this.player1.getScore();
+    }
+
+    /**
+     * Getter for the second players score.
+     *
+     * @return - the second players score.
+     */
+    public int getP2Score() {
+        return this.player2.getScore();
+    }
 
 }
