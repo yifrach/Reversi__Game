@@ -4,25 +4,11 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/gameSettings.txt" afterPath="$PROJECT_DIR$/gameSettings.txt" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Board.java" afterPath="$PROJECT_DIR$/src/Main/Board.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/BoardPrint.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Main/BoardScanner.java" afterPath="$PROJECT_DIR$/src/Main/BoardScanner.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Cell.java" afterPath="$PROJECT_DIR$/src/Main/Cell.java" />
       <change beforePath="$PROJECT_DIR$/src/Main/GameManager.java" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Listener.java" afterPath="$PROJECT_DIR$/src/Main/Listener.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" afterPath="$PROJECT_DIR$/src/Main/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/MainMenuController.java" afterPath="$PROJECT_DIR$/src/Main/MainMenuController.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Notifier.java" afterPath="$PROJECT_DIR$/src/Main/Notifier.java" />
       <change beforePath="$PROJECT_DIR$/src/Main/Player.java" afterPath="$PROJECT_DIR$/src/Main/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/PlayerNumber.java" afterPath="$PROJECT_DIR$/src/Main/PlayerNumber.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Point.java" afterPath="$PROJECT_DIR$/src/Main/Point.java" />
       <change beforePath="$PROJECT_DIR$/src/Main/ReversiBoardController.java" afterPath="$PROJECT_DIR$/src/Main/ReversiBoardController.java" />
       <change beforePath="$PROJECT_DIR$/src/Main/ReversiGame.fxml" afterPath="$PROJECT_DIR$/src/Main/ReversiGame.fxml" />
       <change beforePath="$PROJECT_DIR$/src/Main/ReversiGameController.java" afterPath="$PROJECT_DIR$/src/Main/ReversiGameController.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Settings.fxml" afterPath="$PROJECT_DIR$/src/Main/Settings.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/Main/SettingsController.java" afterPath="$PROJECT_DIR$/src/Main/SettingsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/SettingsReader.java" afterPath="$PROJECT_DIR$/src/Main/SettingsReader.java" />
-      <change beforePath="$PROJECT_DIR$/src/Main/StringPrint.java" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,21 +74,22 @@
       <file leaf-file-name="ReversiBoardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/ReversiBoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="93" column="1" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+            <state relative-caret-position="555">
+              <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding>
-                <element signature="e#3720#3721#0" expanded="true" />
-                <element signature="e#3770#3771#0" expanded="true" />
+                <element signature="method#ReversiBoardController#0;class#ReversiBoardController#0" expanded="false" />
+                <element signature="e#3712#3713#0" expanded="true" />
+                <element signature="e#3762#3763#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReversiGameController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReversiGameController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/ReversiGameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+            <state relative-caret-position="1230">
+              <caret line="105" column="33" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
               <folding>
                 <element signature="docComment;method#converter#0;class#ReversiGameController#0" expanded="false" />
                 <element signature="method#converter#0;class#ReversiGameController#0" expanded="false" />
@@ -111,45 +98,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReversiGame.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/ReversiGame.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+            <state relative-caret-position="394">
+              <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
               <folding>
-                <element signature="docComment;method#getCurrentPlayer#0;class#GameManager#0" expanded="false" />
-                <element signature="e#2314#2315#0" expanded="true" />
-                <element signature="e#2355#2356#0" expanded="true" />
                 <element signature="docComment;method#getP1Score#0;class#GameManager#0" expanded="false" />
-                <element signature="e#2494#2495#0" expanded="true" />
-                <element signature="e#2540#2541#0" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
+                <element signature="e#2390#2391#0" expanded="true" />
                 <element signature="docComment;method#getP2Score#0;class#GameManager#0" expanded="false" />
-                <element signature="e#2681#2682#0" expanded="true" />
-                <element signature="e#2727#2728#0" expanded="true" />
+                <element signature="e#2531#2532#0" expanded="true" />
+                <element signature="e#2577#2578#0" expanded="true" />
+                <element signature="docComment;method#getCurrentPlayerColor#0;class#GameManager#0" expanded="false" />
+                <element signature="method#getCurrentPlayerColor#0;class#GameManager#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/MainMenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -231,21 +194,21 @@
         <option value="$PROJECT_DIR$/src/Main/Listener.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/Main/Notifier.java" />
-        <option value="$PROJECT_DIR$/src/Main/Player.java" />
         <option value="$PROJECT_DIR$/src/Main/PlayerNumber.java" />
         <option value="$PROJECT_DIR$/src/Main/Point.java" />
         <option value="$PROJECT_DIR$/src/Main/SettingsReader.java" />
         <option value="$PROJECT_DIR$/src/Main/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/Main/SettingsController.java" />
-        <option value="$PROJECT_DIR$/src/Main/GameManager.java" />
         <option value="$PROJECT_DIR$/src/Main/ReversiGame.fxml" />
-        <option value="$PROJECT_DIR$/src/Main/ReversiBoardController.java" />
+        <option value="$PROJECT_DIR$/src/Main/Player.java" />
         <option value="$PROJECT_DIR$/src/Main/ReversiGameController.java" />
+        <option value="$PROJECT_DIR$/src/Main/ReversiBoardController.java" />
+        <option value="$PROJECT_DIR$/src/Main/GameManager.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1358" />
     <option name="height" value="737" />
   </component>
@@ -327,10 +290,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -527,18 +490,16 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1368" height="741" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1368" height="741" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -559,6 +520,7 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -574,7 +536,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -666,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="2547" column="0" lean-forward="false" selection-start-line="2547" selection-start-column="0" selection-end-line="2547" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,14 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -929,24 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;method#getCurrentPlayer#0;class#GameManager#0" expanded="false" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2355#2356#0" expanded="true" />
-            <element signature="docComment;method#getP1Score#0;class#GameManager#0" expanded="false" />
-            <element signature="e#2494#2495#0" expanded="true" />
-            <element signature="e#2540#2541#0" expanded="true" />
-            <element signature="docComment;method#getP2Score#0;class#GameManager#0" expanded="false" />
-            <element signature="e#2681#2682#0" expanded="true" />
-            <element signature="e#2727#2728#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ReversiGame.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -958,24 +893,55 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding>
+            <element signature="e#1075#1076#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
+            <element signature="e#1256#1257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ReversiBoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="93" column="1" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        <state relative-caret-position="555">
+          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
           <folding>
-            <element signature="e#3720#3721#0" expanded="true" />
-            <element signature="e#3770#3771#0" expanded="true" />
+            <element signature="method#ReversiBoardController#0;class#ReversiBoardController#0" expanded="false" />
+            <element signature="e#3712#3713#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ReversiGameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+        <state relative-caret-position="1230">
+          <caret line="105" column="33" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="33" />
           <folding>
             <element signature="docComment;method#converter#0;class#ReversiGameController#0" expanded="false" />
             <element signature="method#converter#0;class#ReversiGameController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;method#getP1Score#0;class#GameManager#0" expanded="false" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#2390#2391#0" expanded="true" />
+            <element signature="docComment;method#getP2Score#0;class#GameManager#0" expanded="false" />
+            <element signature="e#2531#2532#0" expanded="true" />
+            <element signature="e#2577#2578#0" expanded="true" />
+            <element signature="docComment;method#getCurrentPlayerColor#0;class#GameManager#0" expanded="false" />
+            <element signature="method#getCurrentPlayerColor#0;class#GameManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

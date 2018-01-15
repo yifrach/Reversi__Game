@@ -1,3 +1,3 @@
 BoardSize: 4.0
-P1Color: 0xff9999ff
+P1Color: 0x99b3ffff
 P2Color: 0xffffffff

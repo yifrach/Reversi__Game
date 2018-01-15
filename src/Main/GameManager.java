@@ -1,5 +1,7 @@
 package Main;
 
+import javafx.scene.paint.Color;
+
 public class GameManager implements Listener {
     private Board board;
     private BoardScanner scanner;
@@ -65,15 +67,6 @@ public class GameManager implements Listener {
     }
 
     /**
-     * Getter for our current player.
-     *
-     * @return - the current players number.
-     */
-    public int getCurrentPlayer() {
-        return this.currentPlayer;
-    }
-
-    /**
      * Getter for the first players score.
      *
      * @return - the first players score.
@@ -89,6 +82,19 @@ public class GameManager implements Listener {
      */
     public int getP2Score() {
         return this.player2.getScore();
+    }
+
+    /**
+     * Getter for our current players color.
+     *
+     * @return - our current players color.
+     */
+    public Color getCurrentPlayerColor() {
+        if (this.currentPlayer == 1) {
+            return this.player1.getPlayerColor();
+        } else {
+            return this.player2.getPlayerColor();
+        }
     }
 
 }

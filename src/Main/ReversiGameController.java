@@ -59,7 +59,7 @@ public class ReversiGameController extends MainMenuController implements Initial
             reversiBoard.draw();
         });
         // Lastly displaying the players initial stats
-        this.currentPlayer.setFill(SettingsReader.getP1Color());
+        this.currentPlayer.setFill(p1.getPlayerColor());
         this.currentPlayer.setStrokeWidth(1);
         this.p1Score.setText("Player 1 Score: " + p1.getScore());
         this.p2Score.setText("Player 2 Score: " + p2.getScore());
@@ -105,8 +105,7 @@ public class ReversiGameController extends MainMenuController implements Initial
         // Redrawing the board based on the move
         this.reversiBoard.draw();
         // Displaying the game stats
-        //this.currentPlayer.setFill(this.reversiBoard.getCurrentPlayerColor());
-        //this.currentPlayer.setStrokeWidth(1);
+        this.currentPlayer.setFill(this.manager.getCurrentPlayerColor());
         this.p1Score.setText("Player 1 Score: " + this.manager.getP1Score());
         this.p2Score.setText("Player 2 Score: " + this.manager.getP2Score());
     }

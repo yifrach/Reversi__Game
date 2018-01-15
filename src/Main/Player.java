@@ -47,4 +47,12 @@ public class Player {
         return this.playerNum;
     }
 
+    /**
+     * Getter for our players color
+     *
+     * @return
+     */
+    public Color getPlayerColor() {
+        return this.color;
+    }
 }

@@ -44,9 +44,9 @@ public class ReversiBoardController extends GridPane {
         for (int i = 1; i <= this.scanner.getBoardSize(); i++) {
             for (int j = 1; j <= this.scanner.getBoardSize(); j++) {
                 StackPane cell = new StackPane();
-                cell.getChildren().removeAll();
                 Rectangle rect = new Rectangle(cellWidth, cellHeight, Color.BEIGE);
                 rect.setStroke(Color.DARKGRAY);
+                rect.setStrokeWidth(2);
                 // Adding each rectangle to our stack pane
                 cell.getChildren().add(rect);
                 // If the this board cell has a disk
