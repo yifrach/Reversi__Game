@@ -37,7 +37,7 @@ public class MainMenuController {
     protected void settingsWindow() {
         try {
             // Loading our settings fxml displaying it in a new window
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../GUI/Settings.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Settings.fxml"));
             Parent settingsRoot = fxmlLoader.load();
             Stage stage = new Stage();
             stage.initModality(Modality.APPLICATION_MODAL);

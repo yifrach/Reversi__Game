@@ -1,5 +1,6 @@
-package GUI;
+package Game_GUI;
 
+import GUI.SettingsReader;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

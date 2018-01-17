@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
       minWidth="-Infinity" prefHeight="300.0" prefWidth="482.0" spacing="20.0" xmlns="http://javafx.com/javafx/8"
-      fx:controller="GUI.SettingsController">
+      fx:controller="Game_GUI.SettingsController">
    <children>
       <Label text="Size of board">
          <VBox.margin>

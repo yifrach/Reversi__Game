@@ -6,9 +6,11 @@ import GUI.WinAlert;
 import Logic.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
 
@@ -71,9 +73,9 @@ public class ReversiGameController extends MainMenuController implements Initial
      * @return - the corresponding Point on the board.
      */
     private Point converter(double x, double y) {
-        int col = (int) (x / (reversiBoard.getPrefWidth() / reversiBoard.getBoardSize()));
-        int row = (int) (y / (reversiBoard.getPrefHeight() / reversiBoard.getBoardSize()));
-        return new Point(row + 1, col + 1);
+        int col= (int)( x/  (this.reversiBoard.getPrefWidth()/this.reversiBoard.getBoardSize()));
+        int row= (int)( y/  (this.reversiBoard.getPrefHeight()/this.reversiBoard.getBoardSize()));
+        return new Point(row +1 , col+1);
     }
 
     @Override
