@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 public class Flip {
     private Board board;
@@ -7,7 +7,7 @@ public class Flip {
     /**
      * The constructor of the class
      *
-     * @param board - a Main.Board
+     * @param board - a Logic.Board
      */
     public Flip(Board board) {
         this.board = board;
@@ -15,7 +15,7 @@ public class Flip {
     }
 
     /**
-     * Main.Flip the board given the disks position and color using 8 sub functions
+     * Logic.Flip the board given the disks position and color using 8 sub functions
      *
      * @param row   - an Integer that represent the row
      * @param col   - an Integer that represent the col

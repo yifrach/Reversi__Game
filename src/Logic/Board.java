@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 public class Board {
     public Cell[][] cellMatrix;

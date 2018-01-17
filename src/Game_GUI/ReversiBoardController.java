@@ -1,5 +1,7 @@
-package Main;
+package Game_GUI;
 
+import Logic.BoardScanner;
+import Logic.PlayerNumber;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.GridPane;
@@ -40,6 +42,7 @@ public class ReversiBoardController extends GridPane {
         // Setting each cells preferred height and width
         int cellHeight = height / this.scanner.getBoardSize();
         int cellWidth = width / this.scanner.getBoardSize();
+
         // Drawing our GUI board going over each cell
         for (int i = 1; i <= this.scanner.getBoardSize(); i++) {
             for (int j = 1; j <= this.scanner.getBoardSize(); j++) {
@@ -49,6 +52,7 @@ public class ReversiBoardController extends GridPane {
                 rect.setStrokeWidth(2);
                 // Adding each rectangle to our stack pane
                 cell.getChildren().add(rect);
+
                 // If the this board cell has a disk
                 if (this.scanner.getBoardMatrix()[i][j].getColor() != PlayerNumber.empty) {
                     // We'll draw the disk
@@ -56,14 +60,7 @@ public class ReversiBoardController extends GridPane {
                     // Adjusting the disks radius to be dynamic
                     double radius = Math.min(cellWidth / 2, cellHeight / 2);
                     radius -= radius / 4;
-                    Circle disk = new Circle(radius, cellColor);
-                    disk.setStroke(Color.BLACK);
-                    disk.setStrokeWidth(2);
-                    DropShadow dropShadow = new DropShadow();
-                    dropShadow.setOffsetY(radius / 4);
-                    dropShadow.setOffsetX(-(radius / 4));
-                    disk.setEffect(dropShadow);
-                    cell.getChildren().add(disk);
+                    cell.getChildren().add(this.addDisk(radius, cellColor));
                 }
                 // Lastly drawing up the users possible moves
                 for (int k = 0; k < this.scanner.getPointsVector().size(); k++) {
@@ -81,6 +78,25 @@ public class ReversiBoardController extends GridPane {
                 this.add(cell, j, i);
             }
         }
+    }
+
+    /**
+     * Creating a circle and decorating it.
+     *
+     * @param radius    - the circles radius.
+     * @param cellColor - the circles color.
+     * @return - desired disk circle.
+     */
+    private Circle addDisk(double radius, Color cellColor) {
+        // decorating our disk...
+        Circle disk = new Circle(radius, cellColor);
+        disk.setStroke(Color.BLACK);
+        disk.setStrokeWidth(2);
+        DropShadow dropShadow = new DropShadow();
+        dropShadow.setOffsetY(radius / 4);
+        dropShadow.setOffsetX(-(radius / 4));
+        disk.setEffect(dropShadow);
+        return disk;
     }
 
     /**

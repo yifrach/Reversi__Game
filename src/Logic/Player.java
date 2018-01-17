@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 import javafx.scene.paint.Color;
 
@@ -6,7 +6,6 @@ public class Player {
     private int playerNum;
     private Color color;
     private int score;
-    private Print movesPrint;
 
     /**
      * Constructor for our player class.
@@ -17,6 +16,7 @@ public class Player {
     public Player(int playerNum, Color color) {
         this.playerNum = playerNum;
         this.color = color;
+        // Each players initial score will always be 2
         this.score = 2;
     }
 

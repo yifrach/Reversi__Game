@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 import javafx.scene.paint.Color;
 
@@ -50,6 +50,7 @@ public class GameManager implements Listener {
      * @param col - the cells column.
      */
     public void clickMade(int row, int col) {
+        this.scanner.freeMovesList();
         this.scanner.scanBoard(this.currentPlayer);
         // If the current player has a valid move
         if (scanner.isValidMove(row, col)) {
@@ -64,6 +65,7 @@ public class GameManager implements Listener {
         // Lastly updating both player scores
         this.player1.updateScore(scanner.getDisksScore(1));
         this.player2.updateScore(scanner.getDisksScore(2));
+
     }
 
     /**
@@ -85,6 +87,15 @@ public class GameManager implements Listener {
     }
 
     /**
+     * Getter for our current players number.
+     *
+     * @return - the number of the current player.
+     */
+    public int getCurrentPlayer() {
+        return this.currentPlayer;
+    }
+
+    /**
      * Getter for our current players color.
      *
      * @return - our current players color.
@@ -97,4 +108,20 @@ public class GameManager implements Listener {
         }
     }
 
+    /**
+     * Return the player number with the leading score.
+     *
+     * @return - the winning player.
+     */
+    public int getWinner() {
+        if (this.getP1Score() > this.getP2Score()) {
+            return PlayerNumber.firstPlayer;
+        } else if (this.getP2Score() > this.getP1Score()) {
+            return PlayerNumber.secondPlayer;
+        } else {
+            // Otherwise it a tie
+            return 0;
+        }
+
+    }
 }

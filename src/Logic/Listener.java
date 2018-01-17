@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 /**
  * Simple listener interface for notifying user mouse clicks.

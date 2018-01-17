@@ -1,4 +1,4 @@
-package Main;
+package GUI;
 
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Slider;

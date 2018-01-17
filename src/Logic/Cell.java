@@ -1,5 +1,6 @@
-package Main;
+package Logic;
 
+import GUI.SettingsReader;
 import javafx.scene.paint.Color;
 
 public class Cell {
@@ -8,7 +9,9 @@ public class Cell {
     /**
      * Our constructor initalzing it as an empty cell by default
      */
-    public Cell() { this.playerNum = PlayerNumber.empty; }
+    Cell() {
+        this.playerNum = PlayerNumber.empty;
+    }
 
     /**
      * Getter for our cells color

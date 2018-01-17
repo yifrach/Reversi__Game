@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,6 @@ public class BoardScanner {
     private int wall;
     private Board board;
     private ArrayList<Point> pointsVector;
-    private int firstPlayerScore;
-    private int secondPlayerScore;
 
     /**
      * Constructor for our board scanner.
@@ -18,8 +16,6 @@ public class BoardScanner {
         this.board = board;
         this.wall = this.board.getSize();
         this.pointsVector = new ArrayList<>();
-        this.firstPlayerScore = 2;
-        this.secondPlayerScore = 2;
     }
 
     /**
@@ -88,7 +84,8 @@ public class BoardScanner {
      * @return - a bool- true if it has moves, false if not
      */
     public boolean hasMoves(int color) {
-        scanBoard(color);
+        this.freeMovesList();
+        this.scanBoard(color);
         return !this.pointsVector.isEmpty();
     }
 

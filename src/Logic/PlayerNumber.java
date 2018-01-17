@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 /**
  * Simple enum class for our player number.

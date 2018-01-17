@@ -1,4 +1,4 @@
-package Main;
+package Logic;
 
 public class Point {
     private int x;
@@ -35,15 +35,7 @@ public class Point {
     public int getY() {
         return this.y;
     }
-
-    /**
-     * Getter for our points grade - number of flips it will make
-     *
-     * @return - an Integer, number of flips it will make
-     */
-    public int getGrade() {
-        return this.grade;
-    }
+    
 
     /**
      * Increasing our points graded by num

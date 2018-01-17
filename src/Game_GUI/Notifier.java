@@ -1,4 +1,6 @@
-package Main;
+package Game_GUI;
+
+import Logic.Listener;
 
 /**
  * Basic notifier interface for our listener design pattern.
